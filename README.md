@@ -1,11 +1,12 @@
+```mermaid
 flowchart TD
     Start([Inicio: Cálculo de Booking de Ventas]) --> Access[Ingresar a 'El Gestor'<br>Sincroniza códigos de proyecto desde Softland]
     
     Access --> Step1[1. Filtrar Órdenes de Venta<br>Desde inicio del año actual hasta hoy]
     
-    Step1 --> Step2[2. Exportar a Excel<br>Limpiar y dejar solo las 10 columnas clave]
+    A --> Step2[2. Exportar a Excel<br>Limpiar y dejar solo las 10 columnas clave]
     
-    Step2 --> Step4[4. Conversión de Moneda<br>Calcular manualmente valor en UF/Dólar a CLP]
+    B --> Step4[4. Conversión de Moneda<br>Calcular manualmente valor en UF/Dólar a CLP]
     
     Step4 --> Step5[5. Desglosar Código de Negocio<br>Identificar: Razón Social, Área, Correlativo y Categorías]
     
@@ -27,7 +28,7 @@ flowchart TD
     AdjustPrelim --> FinalDB
     
     FinalDB --> Context([Fin: Análisis y KPIs<br>- Comparación con metas de Gerentes<br>- % por Cuenta, Área, Categoría y Sub-categoría])
-
+```
     %% Estilos visuales opcionales para claridad
     style Start fill:#f9f,stroke:#333,stroke-width:2px
     style Context fill:#bbf,stroke:#333,stroke-width:2px
